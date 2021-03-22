@@ -2155,8 +2155,8 @@ client.on('message', message => {
   // Check for Ghost users
   if (message.author === null) return;
 
-  // Check for bot users (we ignore other bots, including ourself)
-  if (message.author == client.user || message.author.bot) {
+  // Dont respond to ourself
+  if (message.author == client.user) {
     return;
   }
 
